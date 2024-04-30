@@ -1,0 +1,17 @@
+{
+  "name": "css-day-10-year-anniversary",
+  "version": "1.0.0",
+  "author": "Tessa Viergever <email@example.com>",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "prettier --plugin-search-dir . --check .",
+    "format": "prettier --plugin-search-dir . --write ."
+  },
+  "devDependencies": {
+    "vite": "^5.2.10"
+  },
+  "type": "module",
+  "dependencies": {}
+}
