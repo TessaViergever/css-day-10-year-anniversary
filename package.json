@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "Tessa Viergever <email@example.com>",
   "scripts": {
+    "start": "node server.js",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
@@ -13,5 +14,8 @@
     "vite": "^5.2.10"
   },
   "type": "module",
-  "dependencies": {}
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
 }

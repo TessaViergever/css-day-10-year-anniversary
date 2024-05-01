@@ -1,0 +1,33 @@
+// Import Express uit node_modules
+import express, { response } from "express";
+
+// New Express app
+const app = express();
+
+// URL data from REST API | fetch data als JSON -> variabele data
+const url = "https://cssday.nl/data.json";
+const data = await fetch(url).then((response) => response.json());
+console.log(data);
+
+// Instellen EJS | 'views' map doorgeven
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
+// 'public' = static resources | set up public folder
+app.use(express.static("./public"));
+
+//  Index route maken
+app.get("/", function (req, res) {
+  res.render("index", data);
+});
+
+// Poortnummer instellen
+app.set("port", process.env.PORT || 8000);
+
+// Start express + poortnummer ophalen
+app.listen(app.get("port"), function () {
+  // Console message + doorgeven poortnummer
+  console.log(`Application started on http://localhost:${app.get("port")}`);
+});
+
+// app.use(express.static("public"));
