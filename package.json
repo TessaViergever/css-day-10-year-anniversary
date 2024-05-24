@@ -4,18 +4,21 @@
   "author": "Tessa Viergever <email@example.com>",
   "scripts": {
     "start": "node server.js",
-    "dev": "vite dev",
+    "dev": "nodemon server.js",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "prettier --plugin-search-dir . --check .",
     "format": "prettier --plugin-search-dir . --write ."
   },
   "devDependencies": {
-    "vite": "^5.2.10"
+    "vite": "^5.2.10",
+    "nodemon": ""
   },
   "type": "module",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3"
   }
 }
