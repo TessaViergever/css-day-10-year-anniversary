@@ -32,6 +32,10 @@ body section:nth-of-type(1) {
   margin: 2em;
 }
 
+.test {
+  background-color: pink;
+}
+
 h1 {
   font-size: x-large;
 }
