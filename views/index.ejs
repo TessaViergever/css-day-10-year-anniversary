@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <%- include('./partials/head'); %>
-  </head>
-
+<%- include('./partials/head'); %>
+<% if(data){ %>
   <body>
     <main class="details-wrapper">
       <section class="lead">
@@ -12,17 +8,25 @@
         <p>Checkout the info of all CSS Day events of the last decade!</p>
       </section>
 
-      <section class="details-wrapper">
-        <details class="year-details">
-          <summary class="year-summary">${data.year}</summary>
+      <!-- TODO -->
+  <!-- Loop door alle jaren heen -->
+  <!-- forEach -->
+  <!-- Heb ik dit jaar gehad?  -->
+  <!-- Nee? voeg dat jaar aan <h3> toe -->
+  <!-- Anders: op zoek naar volgende jaartal -->
 
+
+
+      <section class="details-wrapper">
+     
+        <details class="year-details">
+
+    
+          <summary class="year-summary">year</summary>
+  
           <h3>Speakers</h3>
-          <ul>
-            <li>name</li>
-            <li>name</li>
-            <li>name</li>
-            <li>name</li>
-          </ul>
+         
+   
 
           <h3>Attendees</h3>
           <p>total number of attandees: ...</p>
@@ -170,7 +174,7 @@
         </details>
       </section>
     </main>
-
-    <footer><%- include('./partials/footer'); %></footer>
+    <% } %>
+    <%- include('./partials/footer'); %>
   </body>
 </html>
